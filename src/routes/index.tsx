@@ -1,13 +1,32 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Sparkles, Code2, Gauge, Palette, Globe2, Layers } from "lucide-react";
+import {
+  ArrowUpRight,
+  Sparkles,
+  Code2,
+  Gauge,
+  Palette,
+  Globe2,
+  Layers,
+} from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "mugi — Web solutions, crafted with intent" },
-      { name: "description", content: "mugi is a studio designing and engineering premium web experiences for ambitious brands." },
-      { property: "og:title", content: "mugi — Web solutions, crafted with intent" },
-      { property: "og:description", content: "Strategy, design, and development for brands that care about the details." },
+      {
+        name: "description",
+        content:
+          "mugi is a studio designing and engineering premium web experiences for ambitious brands.",
+      },
+      {
+        property: "og:title",
+        content: "mugi — Web solutions, crafted with intent",
+      },
+      {
+        property: "og:description",
+        content:
+          "Strategy, design, and development for brands that care about the details.",
+      },
     ],
   }),
   component: Index,
@@ -30,14 +49,26 @@ function Nav() {
   return (
     <header className="flex items-center justify-between">
       <a href="#" className="flex items-center gap-2">
-        <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gold text-ink font-display text-lg font-bold">m</span>
-        <span className="font-display text-xl font-semibold tracking-tight">mugi</span>
+        <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gold text-ink font-display text-lg font-bold">
+          m
+        </span>
+        <span className="font-display text-xl font-semibold tracking-tight">
+          mugi
+        </span>
       </a>
       <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
-        <a href="#services" className="hover:text-foreground transition-colors">Services</a>
-        <a href="#work" className="hover:text-foreground transition-colors">Work</a>
-        <a href="#process" className="hover:text-foreground transition-colors">Process</a>
-        <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
+        <a href="#services" className="hover:text-foreground transition-colors">
+          Services
+        </a>
+        <a href="#work" className="hover:text-foreground transition-colors">
+          Work
+        </a>
+        <a href="#process" className="hover:text-foreground transition-colors">
+          Process
+        </a>
+        <a href="#contact" className="hover:text-foreground transition-colors">
+          Contact
+        </a>
       </nav>
       <a
         href="#contact"
@@ -63,8 +94,8 @@ function Hero() {
       </h1>
       <div className="mt-8 grid gap-6 lg:grid-cols-12">
         <p className="text-lg text-muted-foreground lg:col-span-6 lg:text-xl">
-          mugi is a small studio building distinguished websites, products, and brand
-          systems for founders who treat the details as the work itself.
+          mugi is a small studio building distinguished websites, products, and
+          brand systems for founders who treat the details as the work itself.
         </p>
         <div className="flex flex-wrap items-end gap-3 lg:col-span-6 lg:justify-end">
           <a
@@ -88,7 +119,10 @@ function Hero() {
 
 function Bento() {
   return (
-    <section id="services" className="mt-20 grid auto-rows-[180px] grid-cols-1 gap-4 md:grid-cols-4 md:auto-rows-[200px]">
+    <section
+      id="services"
+      className="mt-20 grid auto-rows-[180px] grid-cols-1 gap-4 md:grid-cols-4 md:auto-rows-[200px]"
+    >
       {/* Big feature card */}
       <div className="bento-card-gold col-span-1 row-span-2 p-8 md:col-span-2 md:row-span-2 flex flex-col justify-between">
         <Sparkles className="h-8 w-8" strokeWidth={1.5} />
@@ -97,23 +131,40 @@ function Bento() {
             End-to-end studios for brands going somewhere.
           </h3>
           <p className="mt-4 text-sm opacity-80 md:text-base">
-            Strategy, identity, web, and engineering — held together by a single team
-            that owns the outcome.
+            Strategy, identity, web, and engineering — held together by a single
+            team that owns the outcome.
           </p>
         </div>
       </div>
 
-      <BentoCard span="md:col-span-2" icon={<Code2 className="h-6 w-6 text-gold" />} title="Engineering" body="Performant builds in Next.js, Astro, and the modern web stack. Type-safe, accessible, fast." />
+      <BentoCard
+        span="md:col-span-2"
+        icon={<Code2 className="h-6 w-6 text-gold" />}
+        title="Engineering"
+        body="Performant builds in Next.js, Astro, and the modern web stack. Type-safe, accessible, fast."
+      />
 
-      <BentoCard icon={<Palette className="h-6 w-6 text-gold" />} title="Brand & UI" body="Identity systems with a point of view." />
+      <BentoCard
+        icon={<Palette className="h-6 w-6 text-gold" />}
+        title="Brand & UI"
+        body="Identity systems with a point of view."
+      />
 
-      <BentoCard icon={<Gauge className="h-6 w-6 text-gold" />} title="Performance" body="<1s loads. 100 Lighthouse. Always." />
+      <BentoCard
+        icon={<Gauge className="h-6 w-6 text-gold" />}
+        title="Performance"
+        body="<1s loads. 100 Lighthouse. Always."
+      />
 
       {/* Stat block */}
       <div className="bento-card col-span-1 row-span-2 p-6 md:col-span-2 flex flex-col justify-between">
         <div className="flex items-center justify-between">
-          <span className="text-xs uppercase tracking-widest text-muted-foreground">Numbers</span>
-          <span id="work" className="text-xs text-muted-foreground">2019 — 2026</span>
+          <span className="text-xs uppercase tracking-widest text-muted-foreground">
+            Numbers
+          </span>
+          <span id="work" className="text-xs text-muted-foreground">
+            2019 — 2026
+          </span>
         </div>
         <div className="grid grid-cols-3 gap-4">
           <Stat value="60+" label="Projects shipped" />
@@ -122,20 +173,34 @@ function Bento() {
         </div>
       </div>
 
-      <BentoCard icon={<Globe2 className="h-6 w-6 text-gold" />} title="CMS & Editorial" body="Sanity, Payload, custom. Built for the team who'll run it." />
+      <BentoCard
+        icon={<Globe2 className="h-6 w-6 text-gold" />}
+        title="CMS & Editorial"
+        body="Sanity, Payload, custom. Built for the team who'll run it."
+      />
 
-      <BentoCard icon={<Layers className="h-6 w-6 text-gold" />} title="Design Systems" body="Components, tokens, docs — a vocabulary your team can ship in." />
+      <BentoCard
+        icon={<Layers className="h-6 w-6 text-gold" />}
+        title="Design Systems"
+        body="Components, tokens, docs — a vocabulary your team can ship in."
+      />
 
       {/* Process / quote */}
-      <div id="process" className="bento-card col-span-1 row-span-1 p-6 md:col-span-4 flex flex-col items-start justify-center gap-4 md:flex-row md:items-center md:justify-between">
+      <div
+        id="process"
+        className="bento-card col-span-1 row-span-1 p-6 md:col-span-4 flex flex-col items-start justify-center gap-4 md:flex-row md:items-center md:justify-between"
+      >
         <p className="font-display text-xl italic text-foreground/90 md:text-2xl max-w-2xl">
-          "mugi shipped in eight weeks what our last agency couldn't deliver in eight months."
+          "mugi shipped in eight weeks what our last agency couldn't deliver in
+          eight months."
         </p>
         <div className="flex items-center gap-3">
           <div className="h-10 w-10 rounded-full bg-gold/20 border border-gold/40" />
           <div>
             <div className="text-sm font-medium">Leïla Aron</div>
-            <div className="text-xs text-muted-foreground">CEO, Foundry Labs</div>
+            <div className="text-xs text-muted-foreground">
+              CEO, Foundry Labs
+            </div>
           </div>
         </div>
       </div>
@@ -155,7 +220,9 @@ function BentoCard({
   span?: string;
 }) {
   return (
-    <div className={`bento-card group p-6 flex flex-col justify-between hover:border-gold/40 hover:-translate-y-0.5 ${span}`}>
+    <div
+      className={`bento-card group p-6 flex flex-col justify-between hover:border-gold/40 hover:-translate-y-0.5 ${span}`}
+    >
       <div className="flex items-center justify-between">
         {icon}
         <ArrowUpRight className="h-4 w-4 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
@@ -171,7 +238,9 @@ function BentoCard({
 function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div>
-      <div className="font-display text-3xl font-semibold text-gradient-gold md:text-4xl">{value}</div>
+      <div className="font-display text-3xl font-semibold text-gradient-gold md:text-4xl">
+        {value}
+      </div>
       <div className="mt-1 text-xs text-muted-foreground">{label}</div>
     </div>
   );
@@ -179,11 +248,15 @@ function Stat({ value, label }: { value: string; label: string }) {
 
 function Footer() {
   return (
-    <footer id="contact" className="mt-20 rounded-3xl border border-border bg-card/40 p-8 md:p-14">
+    <footer
+      id="contact"
+      className="mt-20 rounded-3xl border border-border bg-card/40 p-8 md:p-14"
+    >
       <div className="grid gap-10 md:grid-cols-2 md:items-end">
         <div>
           <h2 className="font-display text-4xl font-semibold leading-tight md:text-6xl">
-            Have something in <span className="text-gradient-gold italic">mind?</span>
+            Have something in{" "}
+            <span className="text-gradient-gold italic">mind?</span>
           </h2>
           <p className="mt-4 max-w-md text-muted-foreground">
             Tell us about the project. We respond within one business day.
@@ -197,15 +270,25 @@ function Footer() {
             hello@mugi.group
             <ArrowUpRight className="h-5 w-5 transition-transform group-hover:rotate-45" />
           </a>
-          <div className="text-sm text-muted-foreground">Lisbon · Remote worldwide</div>
+          <div className="text-sm text-muted-foreground">
+            Lisbon · Remote worldwide
+          </div>
         </div>
       </div>
       <div className="mt-12 flex flex-col gap-3 border-t border-border pt-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
-        <div>© {new Date().getFullYear()} mugi studio. All rights reserved.</div>
+        <div>
+          © {new Date().getFullYear()} mugi studio. All rights reserved.
+        </div>
         <div className="flex gap-5">
-          <a href="#" className="hover:text-gold">Instagram</a>
-          <a href="#" className="hover:text-gold">LinkedIn</a>
-          <a href="#" className="hover:text-gold">Dribbble</a>
+          <a href="#" className="hover:text-gold">
+            Instagram
+          </a>
+          <a href="#" className="hover:text-gold">
+            LinkedIn
+          </a>
+          <a href="#" className="hover:text-gold">
+            Dribbble
+          </a>
         </div>
       </div>
     </footer>
